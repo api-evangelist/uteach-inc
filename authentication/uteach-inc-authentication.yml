@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+source: https://uteach.io/support/integrations/connect-uteach-to-zapier
+docs: https://uteach.io/support/integrations
+summary:
+  types: [apiKey, http-bearer]
+  notes: Uteach publishes no public developer portal or OpenAPI. Its programmatic
+    surface is authenticated two ways, both documented in the support center -
+    an integration API key (plus school domain) for automation platforms, and a
+    bearer token for the single sign-on user-provisioning endpoint.
+schemes:
+  - name: integrationApiKey
+    type: apiKey
+    description: API key generated in the Uteach dashboard under Settings > Integrations,
+      used together with the school domain to connect Zapier, Make, and Pabbly
+      Connect. The Zapier connection prompts for "API key and domain".
+    docs: https://uteach.io/support/integrations/connect-uteach-to-zapier
+  - name: ssoCreateUserBearer
+    type: http
+    scheme: bearer
+    description: The single sign-on integration provisions users by sending a POST
+      request to the school's "Create user API URL" authenticated with a "Create
+      user API bearer token", both issued from the Uteach dashboard.
+    docs: https://uteach.io/support/integrations/single-sign-on-for-seamless-authentication

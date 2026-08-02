@@ -1,0 +1,20 @@
+generated: '2026-07-21'
+method: searched
+source: https://uteach.io/gdpr
+standards:
+  - id: gdpr
+    conforms: true
+    evidence: Uteach publishes a dedicated GDPR page (https://uteach.io/gdpr) stating
+      its commitment to GDPR, describing its role as Data Processor for customer
+      email data, AWS-hosted infrastructure, and linking its privacy policy.
+  - id: oauth2
+    conforms: false
+    evidence: No OAuth 2.0 surface documented; automation integrations use an API
+      key plus domain, and SSO user provisioning uses a static bearer token.
+  - id: oidc
+    conforms: false
+    evidence: No OpenID Connect discovery document - /.well-known/openid-configuration
+      returned 404 (probed 2026-07-21).
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: /.well-known/security.txt returned 404 (probed 2026-07-21).

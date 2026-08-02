@@ -1,0 +1,112 @@
+generated: '2026-07-21'
+method: searched
+source: https://zapier.com/apps/uteach/integrations
+type: Webhooks
+name: Uteach Automation Events (Zapier / Make / Pabbly)
+description: Uteach does not publish a public self-serve webhook or AsyncAPI surface.
+  It does expose a real event surface through its automation-platform integrations
+  - the Uteach app on Zapier (also Make and Pabbly Connect) delivers instant (REST
+  hook style) triggers for platform events. Connection is authenticated with an API
+  key plus the school domain, generated in the Uteach dashboard under Settings >
+  Integrations. The events below are the instant triggers advertised on the Zapier
+  app directory page.
+authentication:
+  scheme: apiKey + domain
+  docs: https://uteach.io/support/integrations/connect-uteach-to-zapier
+delivery:
+  - platform: Zapier
+    url: https://zapier.com/apps/uteach/integrations
+    docs: https://uteach.io/support/integrations/connect-uteach-to-zapier
+  - platform: Pabbly Connect
+    docs: https://uteach.io/support/integrations/connect-uteach-to-pabbly
+  - platform: Make
+    docs: https://uteach.io/integrations
+events:
+  - name: New Student
+    description: Triggers when a new student is registered.
+    delivery: instant
+  - name: New Course Enrollment
+    description: Triggers when a new course is enrolled.
+    delivery: instant
+  - name: New Bundle Enrollment
+    description: Triggers when a new bundle is enrolled.
+    delivery: instant
+  - name: New Membership Enrollment
+    description: Triggers when a new membership is enrolled.
+    delivery: instant
+  - name: New Coach Enrollment
+    description: Triggers when a new coach is enrolled.
+    delivery: instant
+  - name: New Live Lesson Enrollment
+    description: Triggers when a new live lesson is enrolled.
+    delivery: instant
+  - name: New Product Enrollment
+    description: Triggers when a new product is enrolled.
+    delivery: instant
+  - name: Course Completed
+    description: Triggers when the student completed a course.
+    delivery: instant
+  - name: Course Not Completed
+    description: Triggers when a student fails to finish a course within a specific
+      number of days after enrollment.
+    delivery: instant
+    config: [course, days_since_enrollment]
+  - name: Course Inactivity Reminder
+    description: Triggers when a student has not made any progress in a course for
+      a specific number of days.
+    delivery: instant
+    config: [days_of_inactivity, course]
+  - name: Course Access Removed
+    description: Triggers when access to a course is removed.
+    delivery: instant
+  - name: Bundle Access Removed
+    description: Triggers when access to a bundle is removed.
+    delivery: instant
+  - name: Membership Access Removed
+    description: Triggers when access to a membership is removed.
+    delivery: instant
+  - name: Live Lesson Access Removed
+    description: Triggers when access to a live lesson is removed.
+    delivery: instant
+  - name: Product Access Removed
+    description: Triggers when access to a product is removed.
+    delivery: instant
+  - name: Form Submitted
+    description: Triggers when a new form is submitted.
+    delivery: instant
+  - name: Quiz Submitted
+    description: Triggers when a new quiz is submitted.
+    delivery: instant
+  - name: New Certificate Issued
+    description: Triggers every time a new certificate is generated for a student.
+    delivery: instant
+actions:
+  - name: Create Student
+    description: Creates a student (with create-if-missing support).
+  - name: Add Student to Course
+    description: Adds a student to a course (student email + course slug).
+  - name: Add Student to Bundle
+    description: Adds a student to a bundle (student email + bundle slug).
+  - name: Add Student to Coach
+    description: Adds a student to a coach (student email + coach slug).
+  - name: Add Student to Live Lesson
+    description: Adds a student to a live lesson (student email + live lesson slug).
+  - name: Add Student to Membership
+    description: Adds a student to a membership (student email + membership id).
+  - name: Add Student to Product
+    description: Adds a student to a product (student email + product id).
+searches:
+  - name: Find Course
+    description: Finds a course by id or slug.
+  - name: Find Bundle
+    description: Finds a bundle by id or slug.
+  - name: Find Coach
+    description: Finds a coach by id or slug.
+  - name: Find Live Lesson
+    description: Finds a live lesson by id or slug.
+  - name: Find Membership
+    description: Finds a membership by id.
+  - name: Find Product
+    description: Finds a product by id.
+  - name: Find User
+    description: Finds a user by id or email.

@@ -1,19 +1,50 @@
 aid: uteach-inc
 name: Uteach, Inc.
-description: Uteach, Inc. is a company surfaced as a portfolio company of 500-global and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Uteach is an all-in-one online teaching platform and LMS that lets educators,
+  coaches, and businesses create a branded website and sell online courses, coaching
+  sessions, live lessons, quizzes with certificates, digital products, and community
+  memberships. Positioned as a secure LMS for streamlining employee training, it bundles
+  a website builder, marketing tools, CRM, analytics, and branded mobile apps, and
+  integrates with Zapier, Make, Pabbly, Mailchimp, MailerLite, SMTP, Google Analytics,
+  and a wide set of payment gateways including Stripe and PayPal. Uteach is a 500
+  Global portfolio company.
 url: https://raw.githubusercontent.com/api-evangelist/uteach-inc/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://d35v9chtr4gec.cloudfront.net/uteach/assets/android-icon-512x512-mask.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Education
+- eLearning
+- LMS
+- Online Courses
+- Employee Training
+- Coaching
+- EdTech
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +52,49 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/uteach-inc-domain-security.yml
 - type: Website
   url: https://uteach.io
+- type: Pricing
+  url: https://uteach.io/pricing
+- type: TermsOfService
+  url: https://uteach.io/pages/terms-of-service
+- type: PrivacyPolicy
+  url: https://uteach.io/pages/privacy-policy
+- type: Blog
+  url: https://uteach.io/articles
+- type: Support
+  url: https://uteach.io/support
+- type: SignUp
+  url: https://uteach.io/get-started
+- type: Login
+  url: https://uteach.io/login
+- type: Integrations
+  url: https://uteach.io/integrations
+- type: Compliance
+  url: https://uteach.io/gdpr
+- type: FAQ
+  url: https://uteach.io/faq
+- type: ContactUs
+  url: https://uteach.io/contact-us
+- type: FeatureRequests
+  url: https://uteach.canny.io/feature-requests
+- type: LinkedIn
+  url: https://www.linkedin.com/company/42705890/
+- type: Twitter
+  url: https://twitter.com/Uteach6
+- type: YouTube
+  url: https://www.youtube.com/channel/UCaaMNSMS9aY5bkoU-WetQMQ
+- type: Facebook
+  url: https://www.facebook.com/uteachio
+- type: Instagram
+  url: https://www.instagram.com/uteach.io
+- type: Webhooks
+  url: asyncapi/uteach-inc-webhooks.yml
+- type: Authentication
+  url: authentication/uteach-inc-authentication.yml
+- type: Conformance
+  url: conformance/uteach-inc-conformance.yml
+- type: LLMsTxt
+  url: llms/uteach-inc-llms.txt
