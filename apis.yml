@@ -1,5 +1,5 @@
 aid: uteach-inc
-name: Uteach, Inc.
+name: Uteach
 description: Uteach is an all-in-one online teaching platform and LMS that lets educators,
   coaches, and businesses create a branded website and sell online courses, coaching
   sessions, live lessons, quizzes with certificates, digital products, and community
@@ -119,3 +119,4 @@ common:
   url: conformance/uteach-inc-conformance.yml
 - type: LLMsTxt
   url: llms/uteach-inc-llms.txt
+x-legal-name: Uteach, Inc.
